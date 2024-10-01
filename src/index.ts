@@ -98,7 +98,7 @@ function relativeLinks({ config }: { config?: AstroConfig }): AstroIntegration {
   return {
     name: 'relative-links',
     hooks: {
-      'astro:build:done': async ({ dir }) => {
+      'astro:build:generated': async ({ dir }) => {
         // Use fileURLToPath to get a valid, cross-platform absolute path string
         const outDirPath = fileURLToPath(dir);
 
